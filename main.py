@@ -1,4 +1,5 @@
 import entidade
+import pygameHelpers
 
 import pygame
 from math import sin,cos,tan,radians, pi
@@ -12,19 +13,16 @@ screen = pygame.display.set_mode((x, y))
 clock = pygame.time.Clock()
 running = True
 
-
 # Variaveis de entidades
 
 listaEnt = []
 
 # Criando Variaveis de entidades
 
-qntEntidades = 1
+qntEntidades = 8
 for i in range(qntEntidades):
     posX = x / 2 + cos(radians((360 / qntEntidades) * i)) * 299
     posY = y / 2 - sin(radians((360 / qntEntidades) * i)) * 299
-
-    print (posX,posY)
 
     listaEnt.append(entidade.entidade(screen,posX,posY, 180 + (360 / qntEntidades) * i))
 
@@ -34,10 +32,17 @@ while running:
     # Checa a stack de eventos
     # pygame.QUIT é o evento de clicar no X
 
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-    
+
+        # Configurando pause
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_SPACE:
+                pygameHelpers.pause(screen)         
+
+
     # apaga o ultimo frame enxendo a tela de preto
     screen.fill("black")
 
