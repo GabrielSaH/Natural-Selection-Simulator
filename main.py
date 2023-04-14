@@ -1,5 +1,6 @@
 import entidade
 import pygameHelpers
+import comida
 
 import pygame
 from math import sin,cos,tan,radians, pi
@@ -13,18 +14,23 @@ screen = pygame.display.set_mode((x, y))
 clock = pygame.time.Clock()
 running = True
 
-# Variaveis de entidades
-
-listaEnt = []
 
 # Criando Variaveis de entidades
+listaEnt = []
 
-qntEntidades = 8
+qntEntidades = 3000
 for i in range(qntEntidades):
     posX = x / 2 + cos(radians((360 / qntEntidades) * i)) * 299
     posY = y / 2 - sin(radians((360 / qntEntidades) * i)) * 299
 
     listaEnt.append(entidade.entidade(screen,posX,posY, 180 + (360 / qntEntidades) * i))
+
+# Criando variaveis de comida
+listaComida = []
+
+qntComida = 60
+for c in range(qntComida):
+    listaComida.append(comida.comida(screen, 300, [x/2, y/2]))
 
 
 # Ciclo do jogo
@@ -42,17 +48,23 @@ while running:
             if event.key == pygame.K_SPACE:
                 pygameHelpers.pause(screen)         
 
-
     # apaga o ultimo frame enxendo a tela de preto
     screen.fill("black")
 
     # Desenhando
     pygame.draw.circle(screen,"white", [x / 2, y / 2], 300)
     
-    for ent in listaEnt:
+
+    # Desenhando comidas
+    for com in listaComida:
+        com.draw()
+
+    # Desenhando entidades
+    for num, ent in enumerate(listaEnt):
         ent.draw()
         if ent.calculaDistancia(x / 2, y / 2) < 300:
             ent.randomMove()
+
 
     # Trocando o buffer para aparecer oque foi desenhado
     pygame.display.flip()
