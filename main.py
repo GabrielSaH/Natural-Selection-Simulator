@@ -1,98 +1,66 @@
-import Classes.entidade as entidade
-import Funcoes.pygameHelpers as pygameHelpers
-import Classes.food as food
-import Classes.simulacao as simulacao
-import Variaveis.variaveis as variaveis
-
+import Helpers.PyGameHelper as PyGameHelper
+import Entities.Simulation as Simulation
+import Entities.fps as fps
+import Configuration as configuration
 import pygame
 
-from math import sin,cos,tan,radians, pi, sqrt
+simulation = Simulation.Simulation(10, 30, 300)
 
-
-simu = simulacao.simulacao(40, 50, 300)
-
-
-# Condicional Loop
 running = True
 
-# Ciclo do jogo
+frame_second = fps.fps([20,20])
+
+fps_limit = 60
+
+show_render_division = False
+
 while running:
-    pygameHelpers.pause(variaveis.screen)
+    #PyGameHelper.pause(configuration.screen)
 
-
-    # Checa a stack de eventos
-    # pygame.QUIT é o evento de clicar no X
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
 
-        # Configurando pause
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE:
-                pygameHelpers.pause(variaveis.screen)         
+                PyGameHelper.pause(configuration.screen)         
 
-    # apaga o ultimo frame enxendo a tela de preto
-    variaveis.screen.fill("black")
+            if event.key == pygame.K_ESCAPE:
+                running = False
 
-    # Desenha Arena
-    simu.desenhaArena()    
+            if event.key == pygame.K_RIGHT:
+                fps_limit = fps_limit * 1.5
+
+            if event.key == pygame.K_LEFT:
+                fps_limit = fps_limit / 1.5
+
+            if event.key == pygame.K_UP:
+                simulation.drawRender()
+
+            if event.key == pygame.K_DOWN:
+                show_render_division = not show_render_division
+
+            if event.key == pygame.K_r:
+                simulation.startRound(10,30)
     
-    simu.DrawCircolos()
+    configuration.screen.fill("black")
 
-
-    # Desenha Comida 
-    simu.desenhaComida()
-            
-    # Desenha Entidades e Calcula Colisoes
+    simulation.drawArena()    
     
-    #   Simu.tick()
-        #   Desenha Entidades
+    if show_render_division: simulation.drawCircles()
 
-        #   Move Entidades
+    simulation.drawFoods()
 
-            #   Devora comida
-    
-    simu.tick()
-    
-    # for num, ent in enumerate(listEnt):
-        
-        # # Todas entidades são desenhadas
-        # ent.draw()
-        
-        # # Caso a entidade nao tenha saido da arena, ou seja, ainda ta na simulaçao
-        # if ent.calculaDistancia(variaveis.x / 2, variaveis.y / 2) < 300:
-            
-        #     ent.randomMove()
+    simulation.tick()
 
-        #     # lista contendo = [posicaoX, posicaoY, Raio]            
-        #     posicaoEntidade = ent.getCurrentPosition()
-            
+    if show_render_division: simulation.drawHemispheres()
 
-        #     # Percorre as comidas
-        #     for currentFood in listFood:
+    simulation.drawStatistics([20,45])
 
-        #         # Se ainda nao foi devorada
-        #         if not currentFood.devorada:
+    frame_second.draw()
 
-        #             # lista contendo = [posicaoX, posicaoY, Raio]            
-        #             posicaoComida = currentFood.getPosition()
-
-        #             # Calcula a distancia entre entidade e comida atual
-        #             distance = ent.calculaDistancia(posicaoComida[0], posicaoComida[1])
-                
-        #             # distancia max igual soma dos raios
-        #             distanciaMAX = posicaoComida[2] + posicaoEntidade[2]
-
-        #         if distance <= distanciaMAX:
-
-        #             #muda para devorada, ou seja, nao sera mais desenhada e nem calculada
-        #             currentFood.devorada = True
-
-
-    simu.DrawEmisferios()
-    # Trocando o buffer para aparecer oque foi desenhado
     pygame.display.flip()
 
-    variaveis.clock.tick(60)  # Limite de FPS
-
+    configuration.clock.tick(fps_limit) # Limitador de fps
+    
 pygame.quit()
