@@ -89,20 +89,20 @@ class Simulation:
             radius = (self.arena_radius / 5) * i
             pygame.draw.circle(configuration.screen, [color, color, color], [configuration.x / 2, configuration.y / 2], radius)
 
-    def tick(self, colision = True):
+    def tick(self, collision = True):
         for entity in self.entity_list:
             entity.draw()
             
             if entity.alive:
                 if entity.distanceBetween(configuration.x / 2, configuration.y / 2) < self.arena_radius - 1:
                     entity.move()
-                    if colision:
-                        self.colision(entity)                
+                    if collision:
+                        self.collision(entity)                
                 else:
                     entity.alive = False
                     self.entity_quantity_alive -= 1
 
-    def colision(self, entity):
+    def collision(self, entity):
         ent_x = entity.getPosition()[0]
         ent_y = entity.getPosition()[1]
 
@@ -130,6 +130,7 @@ class Simulation:
                 if entity.distanceBetween(food_x, food_y) <= radius_sum:
                     food_for.devoured = True
                     self.food_quantity_present -= 1
+                    entity.food_eaten += 1 # when food is eaten, it adds to invetory
                 if self.show_render:
                     pygame.draw.line(configuration.screen, "blue", [ent_x, ent_y], [food_x, food_y])
 
@@ -143,3 +144,15 @@ class Simulation:
 
     def drawRender(self):
         self.show_render = not self.show_render
+    
+    # at end of simluation define who reproduces, survive or die    
+    def addEntity(self):
+        for entityEat in self.entity_list:
+            if entityEat.food_eaten >= 2: # reproduce
+                entityEat.food_eaten = 0 # resets invetory to 0
+                self.entity_quantity += 1
+            elif entityEat.food_eaten == 1: # survives
+                entityEat.food_eaten = 0
+            else:                           # dies
+                self.entity_quantity -= 1
+                

@@ -12,9 +12,12 @@ class Entity:
         self.screen = screen
         self.vision_angle = vision_angle
         self.target_vision_angle = self.vision_angle
+        self.food_eaten = 0
 
     def getPosition(self):
         return [self.position_x, self.position_y]
+    
+
 
     def move(self):
         if self.vision_angle == self.target_vision_angle:

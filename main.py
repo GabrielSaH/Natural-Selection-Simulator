@@ -63,4 +63,24 @@ while running:
 
     configuration.clock.tick(fps_limit) # Limitador de fps
     
+    
+    if simulation.entity_quantity == 0:
+        print("Population died, no one is left")
+        running = False
+    
+    # when simulation ends, starts a new one with more or less entities
+    elif simulation.entity_quantity_alive == 0:
+        simulation.addEntity()
+        entity_quantity = simulation.entity_quantity
+        food_quantity = simulation.food_quantity
+        simulation.startRound(entity_quantity, food_quantity)
+    
+    if simulation.food_quantity_present == 0:
+        simulation.addEntity()
+        entity_quantity = simulation.entity_quantity
+        food_quantity = simulation.food_quantity
+        simulation.startRound(entity_quantity, food_quantity)
+    
+
+    
 pygame.quit()
