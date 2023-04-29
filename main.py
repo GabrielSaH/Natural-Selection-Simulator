@@ -26,22 +26,22 @@ while running:
                 PyGameHelper.pause(configuration.screen)         
 
             if event.key == pygame.K_ESCAPE:
-                running = False
+                running = False             # ends simulation
 
             if event.key == pygame.K_RIGHT:
-                fps_limit = fps_limit * 1.5
+                fps_limit = fps_limit * 1.5 # makes simulation faster
 
             if event.key == pygame.K_LEFT:
-                fps_limit = fps_limit / 1.5
+                fps_limit = fps_limit / 1.5 # makes simulation slower
 
             if event.key == pygame.K_UP:
-                simulation.drawRender()
+                simulation.drawRender() # turns on line
 
             if event.key == pygame.K_DOWN:
-                show_render_division = not show_render_division
+                show_render_division = not show_render_division # turns on dev view
 
             if event.key == pygame.K_r:
-                simulation.startRound(10,30)
+                simulation.startRound(10,30) # restart simulation
     
     configuration.screen.fill("black")
 
