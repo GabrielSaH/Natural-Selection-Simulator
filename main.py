@@ -4,7 +4,7 @@ import Entities.fps as fps
 import Configuration as configuration
 import pygame
 
-simulation = Simulation.Simulation(10, 30, 300)
+simulation = Simulation.Simulation(10000, 500, 300)
 
 running = True
 
@@ -12,7 +12,7 @@ frame_second = fps.fps([20,20])
 
 fps_limit = 60
 
-show_render_division = False
+show_render_division = True
 
 while running:
     #PyGameHelper.pause(configuration.screen)
@@ -69,18 +69,10 @@ while running:
         running = False
     
     # when simulation ends, starts a new one with more or less entities
-    elif simulation.entity_quantity_alive == 0:
+    elif (simulation.entity_quantity_alive == 0) or (simulation.food_quantity_present == 0):
         simulation.addEntity()
         entity_quantity = simulation.entity_quantity
         food_quantity = simulation.food_quantity
-        simulation.startRound(entity_quantity, food_quantity)
-    
-    if simulation.food_quantity_present == 0:
-        simulation.addEntity()
-        entity_quantity = simulation.entity_quantity
-        food_quantity = simulation.food_quantity
-        simulation.startRound(entity_quantity, food_quantity)
-    
-
-    
+        simulation.startRound(entity_quantity, food_quantity) 
+        
 pygame.quit()

@@ -92,36 +92,27 @@ class Simulation:
     def tick(self, collision = True):
         for entity in self.entity_list:
             entity.draw()
+
+            temp = self.getArea(entity)
+            quadrant = temp[0]
+            area = temp[1]
+                
+            possible_foods = self.global_food[quadrant][area]
             
             if entity.alive:
                 if entity.distanceBetween(configuration.x / 2, configuration.y / 2) < self.arena_radius - 1:
-                    entity.move()
+                    entity.move(possible_foods)
                     if collision:
-                        self.collision(entity)                
+                        self.collision(entity, quadrant, area)                
                 else:
                     entity.alive = False
                     self.entity_quantity_alive -= 1
 
-    def collision(self, entity):
+    def collision(self, entity, quadrant, area):
         ent_x = entity.getPosition()[0]
         ent_y = entity.getPosition()[1]
-
-        center_distance = sqrt((ent_x - (configuration.x / 2)) ** 2 + (ent_y - (configuration.y / 2)) ** 2)
-        ent_circle = floor(center_distance / 60)
-
-        if ent_x > configuration.x / 2:
-            if ent_y < configuration.y / 2:
-                ent_hemisphere = 0
-            else:
-                ent_hemisphere = 3
-
-        else:
-            if ent_y < configuration.y / 2:
-                ent_hemisphere = 1
-            else:
-                ent_hemisphere = 2
         
-        for food_for in self.global_food[ent_hemisphere][ent_circle]:
+        for index, food_for in enumerate(self.global_food[quadrant][area]):
             if not food_for.devoured:
                 food_x = food_for.position_x
                 food_y = food_for.position_y
@@ -131,6 +122,7 @@ class Simulation:
                     food_for.devoured = True
                     self.food_quantity_present -= 1
                     entity.food_eaten += 1 # when food is eaten, it adds to invetory
+                    del self.global_food[quadrant][area][index]
                 if self.show_render:
                     pygame.draw.line(configuration.screen, "blue", [ent_x, ent_y], [food_x, food_y])
 
@@ -155,4 +147,24 @@ class Simulation:
                 entityEat.food_eaten = 0
             else:                           # dies
                 self.entity_quantity -= 1
+    
+    def getArea(self, entity):
+        center_distance = sqrt((entity.position_x - (configuration.x / 2)) ** 2 + (entity.position_y - (configuration.y / 2)) ** 2)
+        entity.circle = floor( center_distance / 60)
+        quadrant = 0
+        area = entity.circle
+
+        if entity.position_x > configuration.x / 2:
+            if entity.position_y < configuration.y / 2:
+                quadrant = 0
+            if entity.position_y > configuration.y / 2:
+                quadrant = 3
+
+        if entity.position_x < configuration.x / 2:
+            if entity.position_y < configuration.y / 2:
+                quadrant = 1
+            if entity.position_y > configuration.y / 2:
+                quadrant = 2
+        
+        return [quadrant, area]
                 
