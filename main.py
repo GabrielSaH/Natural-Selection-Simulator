@@ -4,7 +4,7 @@ import Entities.fps as fps
 import Configuration as configuration
 import pygame
 
-simulation = Simulation.Simulation(10000, 500, 300)
+simulation = Simulation.Simulation(100 , 100, 300)
 
 running = True
 
@@ -12,7 +12,7 @@ frame_second = fps.fps([20,20])
 
 fps_limit = 60
 
-show_render_division = True
+show_render_division = False
 
 while running:
     #PyGameHelper.pause(configuration.screen)
@@ -41,13 +41,9 @@ while running:
                 show_render_division = not show_render_division # turns on dev view
 
             if event.key == pygame.K_r:
-                simulation.startRound(10,30) # restart simulation
+                simulation.startRound(1,300) # restart simulation
     
-    configuration.screen.fill("black")
-
-    simulation.drawArena()    
-    
-    if show_render_division: simulation.drawCircles()
+    configuration.screen.fill("WHITE")
 
     simulation.drawFoods()
 
