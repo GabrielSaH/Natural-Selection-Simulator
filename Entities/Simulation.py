@@ -1,4 +1,4 @@
-import Entities.Entity as Entity
+import Entities.EntityHerbivor as Entity
 import Entities.Food as Food
 import pygame
 import Configuration as configuration
@@ -7,36 +7,35 @@ import numpy as np
 
 class Simulation:
     
-    def __init__(self, entity_quantity, food_quantity, arena_radius):
+    def __init__(self, entity_quantity_herbivor, food_quantity, arena_radius):
         
         self.global_food = [[[] for row in range(20)] for column in range(ceil(configuration.y / (configuration.x / 20)))]
         self.arena_radius = arena_radius
-        self.entity_list = []
+        self.entity_list_herbivor = []   
         self.food_list = []
         self.food_quantity = food_quantity
-        self.entity_quantity = entity_quantity
+        self.entity_quantity_herbivor = entity_quantity_herbivor
         self.food_quantity_present = food_quantity
-        self.entity_quantity_alive = entity_quantity
+        self.entity_quantity_alive = entity_quantity_herbivor
         self.show_render = False
 
-        self.startRound(entity_quantity,food_quantity)
+        self.startRound(entity_quantity_herbivor,food_quantity)
 
-    def startRound(self, entity_quantity, food_quantity, restart = True):
+    def startRound(self, entity_quantity_herbivor, food_quantity, restart = True):
         if restart:
             self.global_food = [[[] for row in range(20)] for column in range(ceil(configuration.y / (configuration.x / 20)))]
-            self.entity_list = []
+            self.entity_list_herbivor = []    
             self.food_list = []
             self.food_quantity = food_quantity
-            self.entity_quantity = entity_quantity
+            self.entity_quantity = entity_quantity_herbivor
             self.food_quantity_present = food_quantity
-            self.entity_quantity_alive = entity_quantity
+            self.entity_quantity_alive = entity_quantity_herbivor
 
+        for i in range(1, entity_quantity_herbivor + 1):
+            position_x = i * (configuration.x / (entity_quantity_herbivor + 2))
+            self.entity_list_herbivor.append(Entity.EntityHerbivor(position_x, configuration.y - 5, 90, 1, 1))
 
-        for i in range(1, entity_quantity + 1):
-            position_x = i * (configuration.x / (entity_quantity + 2))
-            self.entity_list.append(Entity.Entity(position_x, configuration.y - 5, 90))
-
-        for c in range(food_quantity):
+        for _ in range(food_quantity):
             food_x = np.random.randint(50,configuration.x - 50)
             food_y = np.random.randint(50, configuration.y - 50)
 
@@ -57,7 +56,7 @@ class Simulation:
                         food.draw()
             
     def drawEntities(self):
-        for entity in self.entity_list:
+        for entity in self.entity_list_herbivor:
             entity.draw()
 
     def drawHemispheres(self):
@@ -71,7 +70,7 @@ class Simulation:
             pygame.draw.line(configuration.screen, "black", [row * block_size,0], [row * block_size, configuration.y])
     
     def tick(self, collision = True):
-        for entity in self.entity_list:
+        for entity in self.entity_list_herbivor:
             entity.draw()
 
             if entity.alive:
@@ -119,7 +118,7 @@ class Simulation:
     
     # at end of simluation define who reproduces, survive or die    
     def addEntity(self):
-        for entityEat in self.entity_list:
+        for entityEat in self.entity_list_herbivor:
             if entityEat.food_eaten >= 2: # reproduce
                 entityEat.food_eaten = 0 # resets invetory to 0
                 self.entity_quantity += 1
