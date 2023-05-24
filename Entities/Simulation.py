@@ -1,4 +1,5 @@
 import Entities.EntityHerbivor as Entity
+import Entities.EntityCarnivor as EntityCarnivor
 import Entities.Food as Food
 import pygame
 import Configuration as configuration
@@ -7,33 +8,42 @@ import numpy as np
 
 class Simulation:
     
-    def __init__(self, entity_quantity_herbivor, food_quantity, arena_radius):
+    def __init__(self, entity_quantity_herbivor, entity_quantity_carnivor, food_quantity, arena_radius):
         
         self.global_food = [[[] for row in range(20)] for column in range(ceil(configuration.y / (configuration.x / 20)))]
         self.arena_radius = arena_radius
-        self.entity_list_herbivor = []   
+        self.entity_list_herbivor = []  
+        self.entity_list_carnivor = [] 
         self.food_list = []
         self.food_quantity = food_quantity
         self.entity_quantity_herbivor = entity_quantity_herbivor
+        self.entity_quantity_carnivor = entity_quantity_carnivor
         self.food_quantity_present = food_quantity
-        self.entity_quantity_alive = entity_quantity_herbivor
+        self.entity_quantity_alive = entity_quantity_herbivor + entity_quantity_carnivor
         self.show_render = False
 
-        self.startRound(entity_quantity_herbivor,food_quantity)
+        self.startRound(entity_quantity_herbivor, entity_quantity_carnivor, food_quantity)
 
-    def startRound(self, entity_quantity_herbivor, food_quantity, restart = True):
+    def startRound(self, entity_quantity_herbivor, entity_quantity_carnivor,food_quantity, restart = True):
         if restart:
             self.global_food = [[[] for row in range(20)] for column in range(ceil(configuration.y / (configuration.x / 20)))]
-            self.entity_list_herbivor = []    
+            self.entity_list_herbivor = []
+            self.entity_list_carnivor = []    
             self.food_list = []
             self.food_quantity = food_quantity
-            self.entity_quantity = entity_quantity_herbivor
+            self.entity_quantity = entity_quantity_herbivor + entity_quantity_carnivor
+            self.entity_quantity_herbivor_alive = entity_quantity_herbivor
+            self.entity_quantity_carnivor_alive = entity_quantity_carnivor
             self.food_quantity_present = food_quantity
-            self.entity_quantity_alive = entity_quantity_herbivor
+            self.entity_quantity_alive = entity_quantity_herbivor + entity_quantity_carnivor
 
         for i in range(1, entity_quantity_herbivor + 1):
             position_x = i * (configuration.x / (entity_quantity_herbivor + 2))
             self.entity_list_herbivor.append(Entity.EntityHerbivor(position_x, configuration.y - 5, 90, 1, 1))
+
+        for i in range(1, entity_quantity_carnivor + 1):
+            position_x = i * (configuration.x / (entity_quantity_herbivor + 2))
+            self.entity_list_carnivor.append(EntityCarnivor.EntityCarnivor(position_x, configuration.y - 10, 90, 1, 1))
 
         for _ in range(food_quantity):
             food_x = np.random.randint(50,configuration.x - 50)
@@ -57,7 +67,9 @@ class Simulation:
             
     def drawEntities(self):
         for entity in self.entity_list_herbivor:
-            entity.draw()
+            entity.drawHerbivor()        
+        for entity in self.entity_list_carnivor:
+            entity.drawCarnivor()
 
     def drawHemispheres(self):
         x = 20
@@ -71,7 +83,23 @@ class Simulation:
     
     def tick(self, collision = True):
         for entity in self.entity_list_herbivor:
-            entity.draw()
+            entity.drawHerbivor()
+
+            if entity.alive:
+                
+                position = entity.getPosition()
+    
+                if (2 < position[0] < configuration.x) and (0 < position[1] < configuration.y) :
+                    temp = self.getMatrixPosition(entity)
+                    entity.move(self.global_food[temp[0]][temp[1]])
+                    if collision:
+                        self.collision(entity, temp[0], temp[1])                
+                else:
+                    entity.alive = False
+                    self.entity_quantity_alive -= 1        
+        
+        for entity in self.entity_list_carnivor:
+            entity.drawCarnivor()
 
             if entity.alive:
                 
@@ -85,6 +113,10 @@ class Simulation:
                 else:
                     entity.alive = False
                     self.entity_quantity_alive -= 1
+
+
+
+        
 
     def collision(self, entity, column, row):
         ent_x = entity.getPosition()[0]
@@ -121,11 +153,20 @@ class Simulation:
         for entityEat in self.entity_list_herbivor:
             if entityEat.food_eaten >= 2: # reproduce
                 entityEat.food_eaten = 0 # resets invetory to 0
-                self.entity_quantity += 1
+                self.entity_quantity_herbivor_alive += 1
             elif entityEat.food_eaten == 1: # survives
                 entityEat.food_eaten = 0
             else:                           # dies
-                self.entity_quantity -= 1
+                self.entity_quantity_herbivor_alive -= 1
+        
+        for entityEat in self.entity_list_carnivor:
+            if entityEat.food_eaten >= 2: # reproduce
+                entityEat.food_eaten = 0 # resets invetory to 0
+                self.entity_quantity_carnivor_alive += 1
+            elif entityEat.food_eaten == 1: # survives
+                entityEat.food_eaten = 0
+            else:                           # dies
+                self.entity_quantity_carnivor_alive -= 1
     
     def getMatrixPosition(self, entity):
         ent_position = entity.getPosition()

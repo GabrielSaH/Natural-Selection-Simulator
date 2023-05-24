@@ -78,10 +78,7 @@ class Entity:
             self.position_y -= sin(radians(self.vision_angle))
 
 
-    def draw(self):
-        pygame.draw.circle(self.screen, "green", self.getPosition(), self.radius)
-        pygame.draw.line(self.screen, "green", self.getPosition(), self.frontLine(), 2)
-
+    
     def frontLine(self):
         x = self.position_x + cos(radians(self.vision_angle)) * self.radius * 2
         y = self.position_y - sin(radians(self.vision_angle)) * self.radius * 2
