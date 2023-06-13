@@ -1,5 +1,5 @@
 import pygame
-from math import sin, cos, radians, sqrt, atan2, pi
+from math import sin, cos, radians, sqrt, atan2, pi, degrees, acos, floor
 import Configuration as configuration
 import Entities.Entity as Entity
 import Entities.Food as Food
@@ -18,5 +18,6 @@ class EntityHerbivor(Entity.Entity):
         self.food_type = "plant"
 
     def drawHerbivor(self):
-        pygame.draw.circle(self.screen, self.color, self.getPosition(), self.radius)
-        pygame.draw.line(self.screen, self.color, self.getPosition(), self.frontLine(), 2)
+        pygame.draw.circle(configuration.screen, self.color, self.getPosition(), self.radius)
+        pygame.draw.line(configuration.screen, self.color, self.getPosition(), self.frontLine(), 2)
+
