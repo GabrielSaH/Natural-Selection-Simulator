@@ -1,0 +1,750 @@
+[
+     {
+          "Time": 10,
+          "Herbivor_Quantity": 9,
+          "Carnivor_Quantity": 22,
+          "Food_Quantity": 240,
+          "Herbivor/Carnivor-Ratio": 0.4090909090909091
+     },
+     {
+          "Time": 20,
+          "Herbivor_Quantity": 13,
+          "Carnivor_Quantity": 1,
+          "Food_Quantity": 264,
+          "Herbivor/Carnivor-Ratio": 13.0
+     },
+     {
+          "Time": 30,
+          "Herbivor_Quantity": 19,
+          "Carnivor_Quantity": 1,
+          "Food_Quantity": 200,
+          "Herbivor/Carnivor-Ratio": 19.0
+     },
+     {
+          "Time": 40,
+          "Herbivor_Quantity": 35,
+          "Carnivor_Quantity": 2,
+          "Food_Quantity": 121,
+          "Herbivor/Carnivor-Ratio": 17.5
+     },
+     {
+          "Time": 50,
+          "Herbivor_Quantity": 61,
+          "Carnivor_Quantity": 2,
+          "Food_Quantity": 55,
+          "Herbivor/Carnivor-Ratio": 30.5
+     },
+     {
+          "Time": 60,
+          "Herbivor_Quantity": 90,
+          "Carnivor_Quantity": 3,
+          "Food_Quantity": 40,
+          "Herbivor/Carnivor-Ratio": 30.0
+     },
+     {
+          "Time": 70,
+          "Herbivor_Quantity": 123,
+          "Carnivor_Quantity": 2,
+          "Food_Quantity": 7,
+          "Herbivor/Carnivor-Ratio": 61.5
+     },
+     {
+          "Time": 80,
+          "Herbivor_Quantity": 137,
+          "Carnivor_Quantity": 4,
+          "Food_Quantity": 11,
+          "Herbivor/Carnivor-Ratio": 34.25
+     },
+     {
+          "Time": 90,
+          "Herbivor_Quantity": 146,
+          "Carnivor_Quantity": 4,
+          "Food_Quantity": 2,
+          "Herbivor/Carnivor-Ratio": 36.5
+     },
+     {
+          "Time": 100,
+          "Herbivor_Quantity": 173,
+          "Carnivor_Quantity": 8,
+          "Food_Quantity": 33,
+          "Herbivor/Carnivor-Ratio": 21.625
+     },
+     {
+          "Time": 110,
+          "Herbivor_Quantity": 180,
+          "Carnivor_Quantity": 7,
+          "Food_Quantity": 11,
+          "Herbivor/Carnivor-Ratio": 25.714285714285715
+     },
+     {
+          "Time": 120,
+          "Herbivor_Quantity": 176,
+          "Carnivor_Quantity": 8,
+          "Food_Quantity": 11,
+          "Herbivor/Carnivor-Ratio": 22.0
+     },
+     {
+          "Time": 130,
+          "Herbivor_Quantity": 166,
+          "Carnivor_Quantity": 8,
+          "Food_Quantity": 23,
+          "Herbivor/Carnivor-Ratio": 20.75
+     },
+     {
+          "Time": 140,
+          "Herbivor_Quantity": 169,
+          "Carnivor_Quantity": 15,
+          "Food_Quantity": 39,
+          "Herbivor/Carnivor-Ratio": 11.266666666666667
+     },
+     {
+          "Time": 150,
+          "Herbivor_Quantity": 160,
+          "Carnivor_Quantity": 15,
+          "Food_Quantity": 63,
+          "Herbivor/Carnivor-Ratio": 10.666666666666666
+     },
+     {
+          "Time": 160,
+          "Herbivor_Quantity": 139,
+          "Carnivor_Quantity": 14,
+          "Food_Quantity": 81,
+          "Herbivor/Carnivor-Ratio": 9.928571428571429
+     },
+     {
+          "Time": 170,
+          "Herbivor_Quantity": 113,
+          "Carnivor_Quantity": 14,
+          "Food_Quantity": 112,
+          "Herbivor/Carnivor-Ratio": 8.071428571428571
+     },
+     {
+          "Time": 180,
+          "Herbivor_Quantity": 91,
+          "Carnivor_Quantity": 22,
+          "Food_Quantity": 162,
+          "Herbivor/Carnivor-Ratio": 4.136363636363637
+     },
+     {
+          "Time": 190,
+          "Herbivor_Quantity": 91,
+          "Carnivor_Quantity": 21,
+          "Food_Quantity": 208,
+          "Herbivor/Carnivor-Ratio": 4.333333333333333
+     },
+     {
+          "Time": 200,
+          "Herbivor_Quantity": 73,
+          "Carnivor_Quantity": 21,
+          "Food_Quantity": 246,
+          "Herbivor/Carnivor-Ratio": 3.4761904761904763
+     },
+     {
+          "Time": 210,
+          "Herbivor_Quantity": 39,
+          "Carnivor_Quantity": 21,
+          "Food_Quantity": 262,
+          "Herbivor/Carnivor-Ratio": 1.8571428571428572
+     },
+     {
+          "Time": 220,
+          "Herbivor_Quantity": 36,
+          "Carnivor_Quantity": 15,
+          "Food_Quantity": 280,
+          "Herbivor/Carnivor-Ratio": 2.4
+     },
+     {
+          "Time": 230,
+          "Herbivor_Quantity": 30,
+          "Carnivor_Quantity": 15,
+          "Food_Quantity": 278,
+          "Herbivor/Carnivor-Ratio": 2.0
+     },
+     {
+          "Time": 240,
+          "Herbivor_Quantity": 28,
+          "Carnivor_Quantity": 7,
+          "Food_Quantity": 297,
+          "Herbivor/Carnivor-Ratio": 4.0
+     },
+     {
+          "Time": 250,
+          "Herbivor_Quantity": 29,
+          "Carnivor_Quantity": 7,
+          "Food_Quantity": 302,
+          "Herbivor/Carnivor-Ratio": 4.142857142857143
+     },
+     {
+          "Time": 260,
+          "Herbivor_Quantity": 23,
+          "Carnivor_Quantity": 6,
+          "Food_Quantity": 302,
+          "Herbivor/Carnivor-Ratio": 3.8333333333333335
+     },
+     {
+          "Time": 270,
+          "Herbivor_Quantity": 19,
+          "Carnivor_Quantity": 6,
+          "Food_Quantity": 317,
+          "Herbivor/Carnivor-Ratio": 3.1666666666666665
+     },
+     {
+          "Time": 280,
+          "Herbivor_Quantity": 14,
+          "Carnivor_Quantity": 8,
+          "Food_Quantity": 306,
+          "Herbivor/Carnivor-Ratio": 1.75
+     },
+     {
+          "Time": 290,
+          "Herbivor_Quantity": 15,
+          "Carnivor_Quantity": 8,
+          "Food_Quantity": 311,
+          "Herbivor/Carnivor-Ratio": 1.875
+     },
+     {
+          "Time": 300,
+          "Herbivor_Quantity": 25,
+          "Carnivor_Quantity": 3,
+          "Food_Quantity": 293,
+          "Herbivor/Carnivor-Ratio": 8.333333333333334
+     },
+     {
+          "Time": 310,
+          "Herbivor_Quantity": 28,
+          "Carnivor_Quantity": 3,
+          "Food_Quantity": 254,
+          "Herbivor/Carnivor-Ratio": 9.333333333333334
+     },
+     {
+          "Time": 320,
+          "Herbivor_Quantity": 25,
+          "Carnivor_Quantity": 5,
+          "Food_Quantity": 226,
+          "Herbivor/Carnivor-Ratio": 5.0
+     },
+     {
+          "Time": 330,
+          "Herbivor_Quantity": 38,
+          "Carnivor_Quantity": 2,
+          "Food_Quantity": 209,
+          "Herbivor/Carnivor-Ratio": 19.0
+     },
+     {
+          "Time": 340,
+          "Herbivor_Quantity": 49,
+          "Carnivor_Quantity": 2,
+          "Food_Quantity": 169,
+          "Herbivor/Carnivor-Ratio": 24.5
+     },
+     {
+          "Time": 350,
+          "Herbivor_Quantity": 62,
+          "Carnivor_Quantity": 2,
+          "Food_Quantity": 110,
+          "Herbivor/Carnivor-Ratio": 31.0
+     },
+     {
+          "Time": 360,
+          "Herbivor_Quantity": 87,
+          "Carnivor_Quantity": 4,
+          "Food_Quantity": 86,
+          "Herbivor/Carnivor-Ratio": 21.75
+     },
+     {
+          "Time": 370,
+          "Herbivor_Quantity": 117,
+          "Carnivor_Quantity": 4,
+          "Food_Quantity": 84,
+          "Herbivor/Carnivor-Ratio": 29.25
+     },
+     {
+          "Time": 380,
+          "Herbivor_Quantity": 135,
+          "Carnivor_Quantity": 8,
+          "Food_Quantity": 65,
+          "Herbivor/Carnivor-Ratio": 16.875
+     },
+     {
+          "Time": 390,
+          "Herbivor_Quantity": 128,
+          "Carnivor_Quantity": 8,
+          "Food_Quantity": 46,
+          "Herbivor/Carnivor-Ratio": 16.0
+     },
+     {
+          "Time": 400,
+          "Herbivor_Quantity": 129,
+          "Carnivor_Quantity": 13,
+          "Food_Quantity": 36,
+          "Herbivor/Carnivor-Ratio": 9.923076923076923
+     },
+     {
+          "Time": 410,
+          "Herbivor_Quantity": 132,
+          "Carnivor_Quantity": 13,
+          "Food_Quantity": 73,
+          "Herbivor/Carnivor-Ratio": 10.153846153846153
+     },
+     {
+          "Time": 420,
+          "Herbivor_Quantity": 143,
+          "Carnivor_Quantity": 18,
+          "Food_Quantity": 115,
+          "Herbivor/Carnivor-Ratio": 7.944444444444445
+     },
+     {
+          "Time": 430,
+          "Herbivor_Quantity": 143,
+          "Carnivor_Quantity": 18,
+          "Food_Quantity": 149,
+          "Herbivor/Carnivor-Ratio": 7.944444444444445
+     },
+     {
+          "Time": 440,
+          "Herbivor_Quantity": 96,
+          "Carnivor_Quantity": 14,
+          "Food_Quantity": 191,
+          "Herbivor/Carnivor-Ratio": 6.857142857142857
+     },
+     {
+          "Time": 450,
+          "Herbivor_Quantity": 80,
+          "Carnivor_Quantity": 14,
+          "Food_Quantity": 214,
+          "Herbivor/Carnivor-Ratio": 5.714285714285714
+     },
+     {
+          "Time": 460,
+          "Herbivor_Quantity": 69,
+          "Carnivor_Quantity": 18,
+          "Food_Quantity": 255,
+          "Herbivor/Carnivor-Ratio": 3.8333333333333335
+     },
+     {
+          "Time": 470,
+          "Herbivor_Quantity": 50,
+          "Carnivor_Quantity": 18,
+          "Food_Quantity": 278,
+          "Herbivor/Carnivor-Ratio": 2.7777777777777777
+     },
+     {
+          "Time": 480,
+          "Herbivor_Quantity": 45,
+          "Carnivor_Quantity": 15,
+          "Food_Quantity": 303,
+          "Herbivor/Carnivor-Ratio": 3.0
+     },
+     {
+          "Time": 490,
+          "Herbivor_Quantity": 37,
+          "Carnivor_Quantity": 15,
+          "Food_Quantity": 312,
+          "Herbivor/Carnivor-Ratio": 2.466666666666667
+     },
+     {
+          "Time": 500,
+          "Herbivor_Quantity": 30,
+          "Carnivor_Quantity": 4,
+          "Food_Quantity": 299,
+          "Herbivor/Carnivor-Ratio": 7.5
+     },
+     {
+          "Time": 510,
+          "Herbivor_Quantity": 25,
+          "Carnivor_Quantity": 4,
+          "Food_Quantity": 250,
+          "Herbivor/Carnivor-Ratio": 6.25
+     },
+     {
+          "Time": 520,
+          "Herbivor_Quantity": 34,
+          "Carnivor_Quantity": 4,
+          "Food_Quantity": 233,
+          "Herbivor/Carnivor-Ratio": 8.5
+     },
+     {
+          "Time": 530,
+          "Herbivor_Quantity": 41,
+          "Carnivor_Quantity": 4,
+          "Food_Quantity": 213,
+          "Herbivor/Carnivor-Ratio": 10.25
+     },
+     {
+          "Time": 540,
+          "Herbivor_Quantity": 48,
+          "Carnivor_Quantity": 4,
+          "Food_Quantity": 217,
+          "Herbivor/Carnivor-Ratio": 12.0
+     },
+     {
+          "Time": 550,
+          "Herbivor_Quantity": 63,
+          "Carnivor_Quantity": 3,
+          "Food_Quantity": 172,
+          "Herbivor/Carnivor-Ratio": 21.0
+     },
+     {
+          "Time": 560,
+          "Herbivor_Quantity": 71,
+          "Carnivor_Quantity": 6,
+          "Food_Quantity": 169,
+          "Herbivor/Carnivor-Ratio": 11.833333333333334
+     },
+     {
+          "Time": 570,
+          "Herbivor_Quantity": 74,
+          "Carnivor_Quantity": 6,
+          "Food_Quantity": 72,
+          "Herbivor/Carnivor-Ratio": 12.333333333333334
+     },
+     {
+          "Time": 580,
+          "Herbivor_Quantity": 76,
+          "Carnivor_Quantity": 11,
+          "Food_Quantity": 75,
+          "Herbivor/Carnivor-Ratio": 6.909090909090909
+     },
+     {
+          "Time": 590,
+          "Herbivor_Quantity": 93,
+          "Carnivor_Quantity": 11,
+          "Food_Quantity": 83,
+          "Herbivor/Carnivor-Ratio": 8.454545454545455
+     },
+     {
+          "Time": 600,
+          "Herbivor_Quantity": 102,
+          "Carnivor_Quantity": 21,
+          "Food_Quantity": 140,
+          "Herbivor/Carnivor-Ratio": 4.857142857142857
+     },
+     {
+          "Time": 610,
+          "Herbivor_Quantity": 93,
+          "Carnivor_Quantity": 21,
+          "Food_Quantity": 194,
+          "Herbivor/Carnivor-Ratio": 4.428571428571429
+     },
+     {
+          "Time": 620,
+          "Herbivor_Quantity": 82,
+          "Carnivor_Quantity": 17,
+          "Food_Quantity": 253,
+          "Herbivor/Carnivor-Ratio": 4.823529411764706
+     },
+     {
+          "Time": 630,
+          "Herbivor_Quantity": 58,
+          "Carnivor_Quantity": 17,
+          "Food_Quantity": 273,
+          "Herbivor/Carnivor-Ratio": 3.411764705882353
+     },
+     {
+          "Time": 640,
+          "Herbivor_Quantity": 45,
+          "Carnivor_Quantity": 13,
+          "Food_Quantity": 296,
+          "Herbivor/Carnivor-Ratio": 3.4615384615384617
+     },
+     {
+          "Time": 650,
+          "Herbivor_Quantity": 31,
+          "Carnivor_Quantity": 13,
+          "Food_Quantity": 298,
+          "Herbivor/Carnivor-Ratio": 2.3846153846153846
+     },
+     {
+          "Time": 660,
+          "Herbivor_Quantity": 30,
+          "Carnivor_Quantity": 7,
+          "Food_Quantity": 322,
+          "Herbivor/Carnivor-Ratio": 4.285714285714286
+     },
+     {
+          "Time": 670,
+          "Herbivor_Quantity": 21,
+          "Carnivor_Quantity": 7,
+          "Food_Quantity": 330,
+          "Herbivor/Carnivor-Ratio": 3.0
+     },
+     {
+          "Time": 680,
+          "Herbivor_Quantity": 15,
+          "Carnivor_Quantity": 5,
+          "Food_Quantity": 344,
+          "Herbivor/Carnivor-Ratio": 3.0
+     },
+     {
+          "Time": 690,
+          "Herbivor_Quantity": 15,
+          "Carnivor_Quantity": 5,
+          "Food_Quantity": 333,
+          "Herbivor/Carnivor-Ratio": 3.0
+     },
+     {
+          "Time": 700,
+          "Herbivor_Quantity": 16,
+          "Carnivor_Quantity": 3,
+          "Food_Quantity": 331,
+          "Herbivor/Carnivor-Ratio": 5.333333333333333
+     },
+     {
+          "Time": 710,
+          "Herbivor_Quantity": 15,
+          "Carnivor_Quantity": 3,
+          "Food_Quantity": 292,
+          "Herbivor/Carnivor-Ratio": 5.0
+     },
+     {
+          "Time": 720,
+          "Herbivor_Quantity": 14,
+          "Carnivor_Quantity": 2,
+          "Food_Quantity": 327,
+          "Herbivor/Carnivor-Ratio": 7.0
+     },
+     {
+          "Time": 730,
+          "Herbivor_Quantity": 19,
+          "Carnivor_Quantity": 2,
+          "Food_Quantity": 334,
+          "Herbivor/Carnivor-Ratio": 9.5
+     },
+     {
+          "Time": 740,
+          "Herbivor_Quantity": 24,
+          "Carnivor_Quantity": 1,
+          "Food_Quantity": 282,
+          "Herbivor/Carnivor-Ratio": 24.0
+     },
+     {
+          "Time": 750,
+          "Herbivor_Quantity": 29,
+          "Carnivor_Quantity": 1,
+          "Food_Quantity": 268,
+          "Herbivor/Carnivor-Ratio": 29.0
+     },
+     {
+          "Time": 760,
+          "Herbivor_Quantity": 31,
+          "Carnivor_Quantity": 2,
+          "Food_Quantity": 140,
+          "Herbivor/Carnivor-Ratio": 15.5
+     },
+     {
+          "Time": 770,
+          "Herbivor_Quantity": 43,
+          "Carnivor_Quantity": 2,
+          "Food_Quantity": 138,
+          "Herbivor/Carnivor-Ratio": 21.5
+     },
+     {
+          "Time": 780,
+          "Herbivor_Quantity": 63,
+          "Carnivor_Quantity": 4,
+          "Food_Quantity": 92,
+          "Herbivor/Carnivor-Ratio": 15.75
+     },
+     {
+          "Time": 790,
+          "Herbivor_Quantity": 83,
+          "Carnivor_Quantity": 4,
+          "Food_Quantity": 91,
+          "Herbivor/Carnivor-Ratio": 20.75
+     },
+     {
+          "Time": 800,
+          "Herbivor_Quantity": 102,
+          "Carnivor_Quantity": 7,
+          "Food_Quantity": 65,
+          "Herbivor/Carnivor-Ratio": 14.571428571428571
+     },
+     {
+          "Time": 810,
+          "Herbivor_Quantity": 128,
+          "Carnivor_Quantity": 7,
+          "Food_Quantity": 63,
+          "Herbivor/Carnivor-Ratio": 18.285714285714285
+     },
+     {
+          "Time": 820,
+          "Herbivor_Quantity": 128,
+          "Carnivor_Quantity": 13,
+          "Food_Quantity": 74,
+          "Herbivor/Carnivor-Ratio": 9.846153846153847
+     },
+     {
+          "Time": 830,
+          "Herbivor_Quantity": 137,
+          "Carnivor_Quantity": 13,
+          "Food_Quantity": 111,
+          "Herbivor/Carnivor-Ratio": 10.538461538461538
+     },
+     {
+          "Time": 840,
+          "Herbivor_Quantity": 120,
+          "Carnivor_Quantity": 19,
+          "Food_Quantity": 152,
+          "Herbivor/Carnivor-Ratio": 6.315789473684211
+     },
+     {
+          "Time": 850,
+          "Herbivor_Quantity": 108,
+          "Carnivor_Quantity": 18,
+          "Food_Quantity": 194,
+          "Herbivor/Carnivor-Ratio": 6.0
+     },
+     {
+          "Time": 860,
+          "Herbivor_Quantity": 85,
+          "Carnivor_Quantity": 21,
+          "Food_Quantity": 237,
+          "Herbivor/Carnivor-Ratio": 4.0476190476190474
+     },
+     {
+          "Time": 870,
+          "Herbivor_Quantity": 61,
+          "Carnivor_Quantity": 21,
+          "Food_Quantity": 270,
+          "Herbivor/Carnivor-Ratio": 2.9047619047619047
+     },
+     {
+          "Time": 880,
+          "Herbivor_Quantity": 51,
+          "Carnivor_Quantity": 14,
+          "Food_Quantity": 303,
+          "Herbivor/Carnivor-Ratio": 3.642857142857143
+     },
+     {
+          "Time": 890,
+          "Herbivor_Quantity": 39,
+          "Carnivor_Quantity": 14,
+          "Food_Quantity": 318,
+          "Herbivor/Carnivor-Ratio": 2.7857142857142856
+     },
+     {
+          "Time": 900,
+          "Herbivor_Quantity": 32,
+          "Carnivor_Quantity": 4,
+          "Food_Quantity": 287,
+          "Herbivor/Carnivor-Ratio": 8.0
+     },
+     {
+          "Time": 910,
+          "Herbivor_Quantity": 28,
+          "Carnivor_Quantity": 4,
+          "Food_Quantity": 249,
+          "Herbivor/Carnivor-Ratio": 7.0
+     },
+     {
+          "Time": 920,
+          "Herbivor_Quantity": 31,
+          "Carnivor_Quantity": 5,
+          "Food_Quantity": 208,
+          "Herbivor/Carnivor-Ratio": 6.2
+     },
+     {
+          "Time": 930,
+          "Herbivor_Quantity": 40,
+          "Carnivor_Quantity": 5,
+          "Food_Quantity": 222,
+          "Herbivor/Carnivor-Ratio": 8.0
+     },
+     {
+          "Time": 940,
+          "Herbivor_Quantity": 45,
+          "Carnivor_Quantity": 8,
+          "Food_Quantity": 236,
+          "Herbivor/Carnivor-Ratio": 5.625
+     },
+     {
+          "Time": 950,
+          "Herbivor_Quantity": 47,
+          "Carnivor_Quantity": 8,
+          "Food_Quantity": 249,
+          "Herbivor/Carnivor-Ratio": 5.875
+     },
+     {
+          "Time": 960,
+          "Herbivor_Quantity": 50,
+          "Carnivor_Quantity": 14,
+          "Food_Quantity": 231,
+          "Herbivor/Carnivor-Ratio": 3.5714285714285716
+     },
+     {
+          "Time": 970,
+          "Herbivor_Quantity": 38,
+          "Carnivor_Quantity": 13,
+          "Food_Quantity": 250,
+          "Herbivor/Carnivor-Ratio": 2.923076923076923
+     },
+     {
+          "Time": 980,
+          "Herbivor_Quantity": 36,
+          "Carnivor_Quantity": 10,
+          "Food_Quantity": 286,
+          "Herbivor/Carnivor-Ratio": 3.6
+     },
+     {
+          "Time": 990,
+          "Herbivor_Quantity": 35,
+          "Carnivor_Quantity": 10,
+          "Food_Quantity": 310,
+          "Herbivor/Carnivor-Ratio": 3.5
+     },
+     {
+          "Time": 1000,
+          "Herbivor_Quantity": 24,
+          "Carnivor_Quantity": 8,
+          "Food_Quantity": 323,
+          "Herbivor/Carnivor-Ratio": 3.0
+     },
+     {
+          "Time": 1010,
+          "Herbivor_Quantity": 21,
+          "Carnivor_Quantity": 8,
+          "Food_Quantity": 341,
+          "Herbivor/Carnivor-Ratio": 2.625
+     },
+     {
+          "Time": 1020,
+          "Herbivor_Quantity": 18,
+          "Carnivor_Quantity": 5,
+          "Food_Quantity": 351,
+          "Herbivor/Carnivor-Ratio": 3.6
+     },
+     {
+          "Time": 1030,
+          "Herbivor_Quantity": 14,
+          "Carnivor_Quantity": 5,
+          "Food_Quantity": 354,
+          "Herbivor/Carnivor-Ratio": 2.8
+     },
+     {
+          "Time": 1040,
+          "Herbivor_Quantity": 13,
+          "Carnivor_Quantity": 3,
+          "Food_Quantity": 358,
+          "Herbivor/Carnivor-Ratio": 4.333333333333333
+     },
+     {
+          "Time": 1050,
+          "Herbivor_Quantity": 13,
+          "Carnivor_Quantity": 3,
+          "Food_Quantity": 358,
+          "Herbivor/Carnivor-Ratio": 4.333333333333333
+     },
+     {
+          "Time": 1060,
+          "Herbivor_Quantity": 13,
+          "Carnivor_Quantity": 0,
+          "Food_Quantity": 358,
+          "Herbivor/Carnivor-Ratio": 13
+     },
+     {
+          "Initial_Herbivor": 17,
+          "Initial_Carnivor": 22,
+          "Initial_Food": 357,
+          "Ratio_Stable": 10.502362901327501
+     }
+]
